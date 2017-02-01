@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: url('../img/bg.png');
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: #d52751;
+}
+
+.width100 {
+	width: 100%;
+}
+
+.white-box {
+	background: #fff;
+	padding: 20px;
+}
+
+.white-box textarea {
+	resize: none;
+}
+
+h3 {
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+table tr td {
+	width: 32%;
+	padding-right: 10px;
+}
+
+.table tr td:first-child {
+	width: 20%;
+}
+.table tr td:nth-child(2) {
+	width: 20%;
+}
+

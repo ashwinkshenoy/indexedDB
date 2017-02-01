@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Indexed DB</title>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--JS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div class="white-box">
+			<div class="container">
+				<h3 class="text-left">
+					A Simple Read / Write Data to IndexedDB <a href="http://dexie.org" target="_blank">(Using Dexie.js)</a>
+				</h3>
+				<hr>
+				<h3>Add Contact Details - </h3>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<input type="text" class="form-control" name="name" placeholder="Enter Name">
+							</td>
+							<td>
+								<input type="text" class="form-control" name="email" placeholder="Enter Email ID (Shoud be unique)">
+							</td>
+							<td>
+								<textarea name="message" class="form-control" rows="1" placeholder="Enter your Message"></textarea>
+							</td>
+							<td>
+								<button class="btn-primary btn" id="submit">Send</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--container end-->
+			<br>
+		</div><!--white-box end-->
+
+		<br>
+
+		<div class="container">
+			<button class="btn btn-danger" id="delete">Delete DB</button>
+			<br><br>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Message</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div><!--container end-->
+
+	</body>
+</html>
