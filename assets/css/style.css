@@ -38,7 +38,11 @@ table tr td {
 .table tr td:first-child {
 	width: 20%;
 }
+
 .table tr td:nth-child(2) {
 	width: 20%;
 }
 
+.heart {
+  color: #fb2323;
+}

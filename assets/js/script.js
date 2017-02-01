@@ -1,22 +1,19 @@
-// Query saved Data
-// db.contact
-//    .where('email')
-//    .equalsIgnoreCase("ashwin@foofys.com")
-//    .each (function (contact) {
-//       console.log ("Found Ashwin: " + JSON.stringify(contact));
-//    });
+
 
 $(document).ready(function($) {
+
 	// Define your database
 	var db = new Dexie("contact_DB");
 	db.version(2).stores({
 		contact: 'email,name,message'
 	});
 
+
 	// Open it
 	db.open().catch(function (e) {
 		console.log("Open failed: " + e);
 	});
+
 
 	// Load saved Data
 	function loadTable(){
@@ -31,6 +28,7 @@ $(document).ready(function($) {
 				$('.table tbody').append(tr);
 			});
 	} // reload table
+
 
 	// Load Table
 	loadTable();
@@ -52,6 +50,7 @@ $(document).ready(function($) {
 		$('textarea').val('');
 	}); // on click
 
+
 	$('#delete').click(function(event) {
 		db.delete().then(() => {
 			console.log("Database successfully deleted");
@@ -64,7 +63,17 @@ $(document).ready(function($) {
 		loadTable();
 	}); // on click
 
+
 	// Delete Induvidual by emailid
 	// db.contact.delete('ashwinkshenoy@gmail.com');
+
+
+	// Query saved Data
+	// db.contact
+	//    .where('email')
+	//    .equalsIgnoreCase("ashwinkshenoy@gmail.com")
+	//    .each (function (contact) {
+	//       console.log ("Found Ashwin: " + JSON.stringify(contact));
+	//    });
 
 }); // doc.ready
